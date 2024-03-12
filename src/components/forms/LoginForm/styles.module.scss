@@ -1,0 +1,50 @@
+
+
+#message {
+    color: var(--Grey-1);
+    text-align: center;
+}
+
+.myInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .75rem;
+    padding-inline: .625rem;
+    width: 95%;
+
+    label {
+        color: var(--Grey-1);
+    }
+
+    input {
+        width: 98%;
+        height: 1.875rem;
+        background-color: var(--Grey-3);
+        border: 1px solid var(--Grey-1);
+        color: var(--Grey-0);
+        border-radius: .25rem;
+    }
+
+    input::placeholder {
+        color: var(--Grey-1);
+    }
+
+}
+
+#login {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: .25rem;
+    border: none;
+    color: var(--Grey-0);
+    background-color: var(--Grey-1);
+    margin-top: 1rem;
+    margin: 0 auto;
+    
+}
+
+#login:hover {
+    background-color: var(--Color-primary);
+    transition: 0.5s;
+}

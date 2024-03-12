@@ -51,7 +51,7 @@ export const RegisterForm = ({setUser}) => {
                     <Input label="Confirmar Senha" type="password" error={errors.confirmPassword} {...register("confirmPassword")} placeholder="Confirme sua senha" />
                     <Input label="Bio" type="text" error={errors.bio} {...register("bio")} placeholder="Fale sobre você" />
                     <Input label="Contato" type="tel" error={errors.contact} {...register("contact")} placeholder="Digite aqui seu contato" />
-                    <label className="paragraph">Selecionar Módulo</label>
+                    <label className="paragraph" id={styles.select}>Selecionar Módulo</label>
                     <select className="title2" name="modulos" id="modulos" {...register("course_module")}>
                         <option value="Primeiro modulo">Primeiro Módulo</option>
                         <option value="Segundo modulo">Segundo Módulo</option>
@@ -60,8 +60,8 @@ export const RegisterForm = ({setUser}) => {
                         <option value="Quinto modulo">Quinto Módulo</option>
                         <option value="Sexto modulo">Sexto Módulo</option>
                     </select>
-                    <button id={styles.buttonFooter} className="paragraph" type="submit">Cadastrar</button>
                 </div>
+                    <button id={styles.buttonFooter} className="paragraph" type="submit">Cadastrar</button>
             </form>
     )
 }

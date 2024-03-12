@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { api } from "../../../services/api";
 
-export const LoginForm = ({setUser}) => {
+export const LoginForm = ({setUser, registers}) => {
 
     const {handleSubmit, register, formState: {errors},} = useForm({
         resolver: zodResolver(loginFormSchema)
@@ -17,7 +17,7 @@ export const LoginForm = ({setUser}) => {
 
     const login = async (payload) => {
         try {
-            const { data } = await api.post("/profile", payload);
+            const { data } = await api.post("/sessions", payload);
     
             localStorage.setItem("@kenzieHub:token", data.accessToken);
               toast.success("Login realizado com sucesso.", {autoClose:2000}) 
@@ -39,13 +39,13 @@ export const LoginForm = ({setUser}) => {
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                 <div className={styles.formHeader}>
                     <h3 className="title2">Crie sua conta</h3>
-                    <p className="headline">Rápido e grátis, vamos nessa</p>
+                    <p className="headline" id={styles.message}>Rápido e grátis, vamos nessa</p>
                 </div>
                 <div className={styles.myInformation}>
                     <Input label="Email" type="email" error={errors.email} {...register("email")} placeholder="Digite aqui seu email" />
                     <Input label="Senha" type="password" error={errors.password} {...register("password")} placeholder="Digite aqui sua senha" />
+                    <button className="headlineBold" id={styles.login}>Entrar</button>
                 </div>
-                <button className="headlineBold" id={styles.login}>Entrar</button>
             </form>
     );
 };
