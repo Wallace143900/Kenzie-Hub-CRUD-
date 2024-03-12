@@ -1,0 +1,48 @@
+main {
+    background-color: var(--Grey-4);
+    width: 100%;
+    height: 50rem;
+
+    .divHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 40%;
+    }
+
+
+    @media (min-width: 1440px) {
+        width: 30%;
+    }
+
+        h3 {
+            color: var(--Grey-0);
+        }
+
+        #buttonHeader {
+            background-color: var(--Grey-3);
+            border: none;
+            color: var(--Grey-0);
+            width: 4.2181rem;
+            height: 2rem;
+            border-radius: .25rem;
+        }
+
+        #buttonHeader:hover {
+            background-color: var(--Grey-2);
+            transition: 0.5s;
+        }
+        
+    }
+}
+
+footer {
+    text-align: center;
+}

@@ -1,0 +1,60 @@
+.form {
+    height: 43.75rem;
+    
+
+    .myInformation {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    p {
+        text-align: center;
+        color: var(--Grey-1);
+    }
+
+    label {
+        color: var(--Grey-1);
+    }
+                
+    input {
+        height: 2.1875rem;
+        background-color: var(--Grey-2);
+        border: none;
+        color: var(--Grey-0);
+    }
+    
+    select {
+        background-color: var(--Grey-2);
+        border: none;
+        color: var(--Grey-1);
+        height: 33px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        
+    
+        option {
+            color: var(--Grey-0);
+            width: 90%;
+        }
+    }
+    
+    #buttonFooter {
+        width: 90%;
+        height: 2.8125rem;
+        background-color: var(--Color-primary-Negative);
+        border: none;
+        color: var(--Grey-0);
+        margin-top: .5rem;
+    }
+    
+    #buttonFooter:hover {
+        width: 90%;
+        background-color: var(--Color-primary);
+        transition: 0.5s;
+        color: var(--Grey-4);
+    }
+}
+
