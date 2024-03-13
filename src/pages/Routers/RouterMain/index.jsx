@@ -1,10 +1,9 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { HomePage } from "../../HomePage";
 import { RegisterPage } from "../../RegisterPage";
-import { UserPage } from "../../UserPage";
+import { Dashboard } from "../../dashboard";
 import { ErrorPage } from "../../ErrorPage";
 import { useState } from "react";
-import { Footer } from "../../../components/Footer";
 
 export const RouterMain = () => {
 
@@ -28,7 +27,7 @@ export const RouterMain = () => {
         <Routes>
             <Route path="/" element={<HomePage setUser={setUser} register={register} registers={registers} />}/>
             <Route path="/register" element={<RegisterPage setUser={setUser} setRegister={setRegister} logout={logout} />}/>
-            <Route path="/User" element={<UserPage logout={logout} user={user} />} />
+            <Route path="/User" element={<Dashboard logout={logout} user={user} />} />
             <Route path="*" element={<ErrorPage />} />
         </Routes>
     )

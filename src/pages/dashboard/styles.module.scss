@@ -7,34 +7,37 @@ main {
         text-align: start;
         width: 100%;
         gap: 2rem;
-
+        
         .iAm {
-
+            
             @media (min-width: 768px) {
-                width: 80%;
+                width: 70%;
                 margin: 0 auto;
             }
     
             @media (min-width: 1024px) {
-                width: 80%;
+                width: 75%;
                 display: flex;
                 justify-content: space-between;
                 margin: 0 auto;
             }
-    
+            
             @media (min-width: 1440px) {
-                width: 80%;
+                width: 65%;
                 display: flex;
                 justify-content: space-between;
                 margin: 0 auto;
             }
-            gap: 2rem;
-        
+
+            h2 {
+                width: 80%;
+            }
+            
             h2 {
                 color: var(--Grey-0);
                 margin-top: 2rem;
                 margin-left: 2rem;
-
+                
                 @media (min-width: 768px) {
                     margin-top: 0;
                     margin-left: 0;
@@ -47,36 +50,48 @@ main {
                 margin-left: 2rem;
                 margin-top: 1rem;
             }
-
+            
             @media (min-width: 768px) {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
                 margin-top: 2rem;
             }
-
+            
             @media (min-width: 1024px) {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
                 margin-top: 2rem;
             }
-
+            
             @media (min-width: 1440px) {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
                 margin-top: 2rem;
             }
         }
-
-
+        
+        
         .main {
             width: 100%;
             display: flex;
             flex-direction: column;
             gap: 2rem;
             border-top: 1px solid var(--Grey-2);
+            
+            @media (min-width: 768px) {
+                text-align: center;
+            }
+
+            @media (min-width: 1024px) {
+                text-align: center;
+            }
+
+            @media (min-width: 1440px) {
+                text-align: center;
+            }
 
             h2 {
                 width: 90%;
@@ -85,7 +100,7 @@ main {
                 color: var(--Grey-0);
             }
 
-            h4 {
+            h3 {
                 color: var(--Grey-0);
                 width: 90%;
                 line-height: 1.5225rem;

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { api } from "../../../services/api";
 
-export const LoginForm = ({setUser, registers}) => {
+export const LoginForm = ({setUser}) => {
 
     const {handleSubmit, register, formState: {errors},} = useForm({
         resolver: zodResolver(loginFormSchema)
@@ -37,15 +37,15 @@ export const LoginForm = ({setUser, registers}) => {
     
     return (
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-                <div className={styles.formHeader}>
-                    <h3 className="title2">Crie sua conta</h3>
-                    <p className="headline" id={styles.message}>Rápido e grátis, vamos nessa</p>
-                </div>
-                <div className={styles.myInformation}>
-                    <Input label="Email" type="email" error={errors.email} {...register("email")} placeholder="Digite aqui seu email" />
-                    <Input label="Senha" type="password" error={errors.password} {...register("password")} placeholder="Digite aqui sua senha" />
-                    <button className="headlineBold" id={styles.login}>Entrar</button>
-                </div>
-            </form>
+            <div className={styles.formHeader}>
+                <h3 className="title2">Crie sua conta</h3>
+                <p className="headline" id={styles.message}>Rápido e grátis, vamos nessa</p>
+            </div>
+            <div className={styles.myInformation}>
+                <Input label="Email" type="email" error={errors.email} {...register("email")} placeholder="Digite aqui seu email" />
+                <Input label="Senha" type="password" error={errors.password} {...register("password")} placeholder="Digite aqui sua senha" />
+                <button className="headlineBold" id={styles.login}>Entrar</button>
+            </div>
+        </form>
     );
 };
