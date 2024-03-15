@@ -28,17 +28,24 @@ main {
                 justify-content: space-between;
                 margin: 0 auto;
             }
-
-            h2 {
-                width: 80%;
-            }
             
             h2 {
+                width: 80%;
                 color: var(--Grey-0);
                 margin-top: 2rem;
                 margin-left: 2rem;
                 
                 @media (min-width: 768px) {
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+
+                @media (min-width: 1024px) {
+                    margin-top: 0;
+                    margin-left: 0;
+                }
+
+                @media (min-width: 1440px) {
                     margin-top: 0;
                     margin-left: 0;
                 }
@@ -49,6 +56,7 @@ main {
                 color: var(--Grey-1);
                 margin-left: 2rem;
                 margin-top: 1rem;
+                width: 40%;
             }
             
             @media (min-width: 768px) {

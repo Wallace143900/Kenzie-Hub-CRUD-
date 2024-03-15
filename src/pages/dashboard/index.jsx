@@ -9,10 +9,10 @@ export const Dashboard = ({logout, user}) => {
                 <div className={styles.container}>
                     <div className={styles.iAm}>
                         <h2 className="title1">Olá, {user?.name}</h2>
-                        <p>Primeiro módulo (Introdução ao Frontend)</p>
+                        <p>{user?.course_module} (Introdução ao Frontend)</p>
                     </div>
                     <div className={styles.main}>
-                        <h2 className="title1">Que pena! Estamos em devolvimento :( </h2>
+                        <h2 className="title1">Que pena! Estamos em desenvolvimento :( </h2>
                         <h3 className="paragraph">Nossa aplicação está em desenvolvimento, em breve teremos novidades...</h3>
                     </div>
                 </div>
