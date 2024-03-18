@@ -1,0 +1,36 @@
+.myInformation {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin: 0 auto;
+
+    .inputGrid {
+        position: relative;
+
+        #inpt {
+    
+        }
+        button {
+            position: absolute;
+            top: 8px;
+            right: 0.5rem;
+            background-color: transparent;
+            border: none;
+            color: var(--Grey-0);
+        }
+    }
+
+
+    .paragraphy2 {
+        color: var(--Color-primary-Focus);
+        margin: 0px;
+        height: 5px;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 15px;
+        margin-top: 8px;
+    }
+}
+
+

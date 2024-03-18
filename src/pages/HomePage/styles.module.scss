@@ -4,6 +4,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 45.625rem;
     border-radius: .25rem;
     gap: .5rem;
     
@@ -15,7 +16,7 @@ main {
     
     .divForm {
         width: 75%;
-        height: 60%;
+        max-height: 100%;
         background-color: var(--Grey-3);
         border-radius: .25rem;
         display: flex;
@@ -66,6 +67,10 @@ main {
                 border: none;
                 color: var(--Grey-0);
                 background-color: var(--Grey-1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
     
                 @media (min-width: 768px) {
                     width: 85%;
@@ -76,7 +81,7 @@ main {
             
 
         #create:hover {
-            background-color: var(--Color-primary);
+            background-color: var(--Color-primary-Focus);
             transition: 0.5s;
         }
     }

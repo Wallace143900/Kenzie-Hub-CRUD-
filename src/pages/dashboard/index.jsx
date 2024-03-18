@@ -1,10 +1,14 @@
+import { useContext } from "react";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
 import styles from "./styles.module.scss"
+import { DashboardContext } from "../../providers/dashboardContext";
 
-export const Dashboard = ({logout, user}) => {
+export const Dashboard = () => {
+
+    const {user} = useContext(DashboardContext);
     return (
 
-        <DefaultTemplate logout={logout} user={user}>
+        <DefaultTemplate>
             <main>
                 <div className={styles.container}>
                     <div className={styles.iAm}>
@@ -12,8 +16,10 @@ export const Dashboard = ({logout, user}) => {
                         <p>{user?.course_module} (Introdução ao Frontend)</p>
                     </div>
                     <div className={styles.main}>
-                        <h2 className="title1">Que pena! Estamos em desenvolvimento :( </h2>
-                        <h3 className="paragraph">Nossa aplicação está em desenvolvimento, em breve teremos novidades...</h3>
+                        <div className={styles.inform}>
+                            <h2 className="title1">Que pena! Estamos em desenvolvimento :( </h2>
+                            <h3 className="paragraph">Nossa aplicação está em desenvolvimento, em breve teremos novidades...</h3>
+                        </div>
                     </div>
                 </div>
             </main> 
