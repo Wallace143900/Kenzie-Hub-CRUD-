@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
-import styles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 import { DashboardContext } from "../../providers/dashboardContext";
 
 export const Dashboard = () => {
