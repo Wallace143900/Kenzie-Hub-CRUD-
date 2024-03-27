@@ -8,8 +8,10 @@ export const DashboardContext = createContext({});
 export const DashboardProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [register, setRegister] = useState(null);
-
     const [loading, setLoading] = useState(false);
+    
+    const [techsList, setTechList] = useState([]);
+
     const navigate = useNavigate();
     const location = window.location.pathname;
 
@@ -26,6 +28,8 @@ export const DashboardProvider = ({children}) => {
                 });
 
                 setUser(data);
+                setTechList(data.techs);
+
                 navigate(location);
             } catch (error) {
                 
@@ -51,8 +55,7 @@ export const DashboardProvider = ({children}) => {
           setUser(data.user);
 
           navigate("/")
-          
-          console.log(data) 
+ 
         } catch (error) {
             toast.error("Email já existente");
         }
@@ -62,11 +65,12 @@ export const DashboardProvider = ({children}) => {
     const userLogin = async (payload) => {
         try {
             const { data } = await api.post("/sessions", payload);
-            console.log(data)
+
             localStorage.setItem("@kenzieHub:token", data.token);
               toast.success("Login realizado com sucesso.", {autoClose:2000}) 
             
               setUser(data.user);
+              setTechList(data.user.techs);
 
               navigate("/user")
         } catch (error) {
@@ -87,6 +91,6 @@ export const DashboardProvider = ({children}) => {
 
 
     return (
-        <DashboardContext.Provider value={{loading, user, register, userRegister, userLogin, userLogout, registers}}>{children}</DashboardContext.Provider>
+        <DashboardContext.Provider value={{loading, user, register, userRegister, userLogin, userLogout, registers, techsList, setTechList}}>{children}</DashboardContext.Provider>
     )
 }

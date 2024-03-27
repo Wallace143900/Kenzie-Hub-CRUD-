@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
 import styles from "./styles.module.scss";
 import { DashboardContext } from "../../providers/dashboardContext";
+import { TechList } from "../../components/TechList";
+import { TechContext } from "../../providers/TechContext";
 
 export const Dashboard = () => {
 
@@ -17,8 +19,7 @@ export const Dashboard = () => {
                     </div>
                     <div className={styles.main}>
                         <div className={styles.inform}>
-                            <h2 className="title1">Que pena! Estamos em desenvolvimento :( </h2>
-                            <h3 className="paragraph">Nossa aplicação está em desenvolvimento, em breve teremos novidades...</h3>
+                           <TechList />  
                         </div>
                     </div>
                 </div>

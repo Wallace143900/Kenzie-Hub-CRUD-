@@ -1,0 +1,90 @@
+li {
+    .container {
+        
+        .tecnologies {
+            width: 95%;
+            height: 95px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            
+            .edition {
+                background-color: var(--Grey-4);
+                width: 96%;
+                margin: 0 auto;
+                height: 75px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: .625rem;
+                border-radius: 5px;
+                margin-top: 1rem;
+
+                #paragraph2 {
+                    text-align: start;
+                    margin-left: 1.5rem;
+                }
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+    
+                .editionTecnologies {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-inline: 8px;
+                    width: 93%;
+                    margin: 0 auto;
+
+                    
+                    @media (min-width: 768px) {
+                        width: 95%;
+                        display: flex;
+                        justify-content: flex-end;
+                    }
+                    
+                    @media (min-width: 1024px) {
+                        width: 96%;
+                    }
+                    
+                    @media (min-width: 1440px) {
+                        width: 97%;
+                    }
+                    
+                    strong {
+                        color: var(--Grey-1);
+                        margin-left: 10px;
+
+                        @media (min-width: 768px) {
+                            margin-right: .5rem;
+                        }
+                    }
+                    
+                    .botao {
+                        gap: 2rem;
+                        
+                        button{
+                            background-color: transparent;
+                            border: none;
+                            color: var(--Grey-0);
+                            border-radius: .3125rem;
+                        }
+    
+                        button:hover {
+                            background-color: var(--Grey-3);
+                            border: none;
+                            color: var(--Grey-0);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

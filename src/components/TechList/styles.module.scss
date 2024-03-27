@@ -1,0 +1,33 @@
+.containerTecnologies {
+    margin: 0 auto;
+    
+    .headerContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+    
+        button {
+            background-color: var(--Grey-3);
+            border: none;
+            color: var(--Grey-0);
+            height: 32px;
+            margin-top: 1rem;
+            border-radius: .3125rem;
+        }
+    
+        button:hover {
+            background-color: var(--Grey-2);
+            border: none;
+            color: var(--Grey-0);
+            transition: 0.3s;
+        }
+    }
+    
+    ul {
+        background-color: var(--Grey-3);
+        border-radius: 5px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
