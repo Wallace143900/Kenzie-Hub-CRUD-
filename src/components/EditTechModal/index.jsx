@@ -4,15 +4,15 @@ import { useContext } from "react";
 import { TechContext } from "../../providers/TechContext";
 import { MdClose } from "react-icons/md";
 import styles from "./styles.module.scss";
-import { EditFormSchema } from "./EditForm.schema";
+import { EditsFormSchema } from "./EditForm.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export const EditTechModal = () => {
 
     const {UpdateTecnologies, editTech, setEditTech } = useContext(TechContext);
 
-    const {handleSubmit, register} = useForm({
-        resolver: zodResolver(EditFormSchema),
+    const {handleSubmit, register, formState: {errors},} = useForm({
+        resolver: zodResolver(EditsFormSchema),
         values: {
             title: editTech.title,
             status: editTech.status, 
@@ -32,7 +32,7 @@ export const EditTechModal = () => {
                     <button aria-label="close" title="Fechar" id={styles.buttonHeaders} onClick={() => setEditTech(null)}> <MdClose size={22} /> </button>
                 </header>
                 <div className={styles.addTecnologies}>
-                    <InputModalEdit label="Name" {...register("title")} placeholder="Digite sua tecnologia" values={editTech.title}/>
+                    <InputModalEdit label="Name" error={errors.title} {...register("title")} placeholder="Digite sua tecnologia" values={editTech.title}/>
                     <label className="headline">Status</label>
                     <select name="Selecionar Status" {...register("status")} className="paragraph"> 
                         <option>Inicinte</option>

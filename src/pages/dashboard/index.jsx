@@ -15,7 +15,7 @@ export const Dashboard = () => {
                 <div className={styles.container}>
                     <div className={styles.iAm}>
                         <h2 className="title1">Olá, {user?.name}</h2>
-                        <p>{user?.course_module} (Introdução ao Frontend)</p>
+                        <p className="paragraph">{user?.course_module} (Introdução ao Frontend)</p>
                     </div>
                     <div className={styles.main}>
                         <div className={styles.inform}>
