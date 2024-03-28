@@ -4,12 +4,12 @@ import "./styles/index.scss";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Spinner } from "react-loading-io";
-import { DashboardContext } from "./providers/dashboardContext.jsx";
+import { UserContext } from "./providers/UserContext.jsx";
 
 
 function App() {
 
-  const {loading} = useContext(DashboardContext);
+  const {loading} = useContext(UserContext);
 
   const spinnerCfg = {left: "45%", transform: "translateY(135%)"}
   return (

@@ -4,12 +4,12 @@ import { Input } from "../Input";
 import { registerFormSchema } from "./registerForm.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
-import { DashboardContext } from "../../../providers/dashboardContext";
+import { UserContext } from "../../../providers/UserContext";
 import { InputPassword } from "../../InputPassword";
 
 export const RegisterForm = () => {
 
-    const { userRegister } = useContext(DashboardContext);
+    const { userRegister } = useContext(UserContext);
 
     
     const onSubmit = (formData) => {

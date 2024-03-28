@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { DefaultTemplate } from "../../components/DefaultTemplate";
 import styles from "./styles.module.scss";
-import { DashboardContext } from "../../providers/dashboardContext";
+import { UserContext } from "../../providers/UserContext";
 import { TechList } from "../../components/TechList";
-import { TechContext } from "../../providers/TechContext";
 
 export const Dashboard = () => {
 
-    const {user} = useContext(DashboardContext);
+    const {user} = useContext(UserContext);
     return (
 
         <DefaultTemplate>

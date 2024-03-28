@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DashboardContext } from "../../providers/dashboardContext";
+import { UserContext } from "../../providers/UserContext";
 import { TechContext } from "../../providers/TechContext";
 import { TechCard } from "./TechCard";
 import { CreateTechModal } from "../CreateTechModal";
@@ -11,7 +11,7 @@ import styles from "./styles.module.scss";
 
 export const TechList = () => {
 
-    const {techsList} = useContext(DashboardContext); 
+    const {techsList} = useContext(UserContext); 
     const {modalOpen, setModalOpen} = useContext(TechContext);
     return (
         <div className={styles.containerTecnologies}>

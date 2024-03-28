@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { api } from "../services/api";
 
-export const DashboardContext = createContext({});
+export const UserContext = createContext({});
 
-export const DashboardProvider = ({children}) => {
+export const UserProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [register, setRegister] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -91,6 +91,6 @@ export const DashboardProvider = ({children}) => {
 
 
     return (
-        <DashboardContext.Provider value={{loading, user, register, userRegister, userLogin, userLogout, registers, techsList, setTechList}}>{children}</DashboardContext.Provider>
+        <UserContext.Provider value={{loading, user, register, userRegister, userLogin, userLogout, registers, techsList, setTechList}}>{children}</UserContext.Provider>
     )
 }

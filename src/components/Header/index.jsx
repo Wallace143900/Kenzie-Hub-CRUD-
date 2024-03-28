@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import styles from "./styles.module.scss";
-import { DashboardContext } from "../../providers/dashboardContext";
+import { UserContext } from "../../providers/UserContext";
 
 export const Header = () => {
 
-    const { userLogout } = useContext(DashboardContext);
+    const { userLogout } = useContext(UserContext);
     return (
         <header>
             <div className={styles.divHeader}>

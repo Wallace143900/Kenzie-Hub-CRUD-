@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { api } from "../services/api";
-import { DashboardContext } from "./dashboardContext";
+import { UserContext } from "./UserContext";
 import { toast } from "react-toastify";
 
 export const TechContext = createContext({});
@@ -8,7 +8,7 @@ export const TechContext = createContext({});
 
 
 export const TechProvider = ({ children }) => {
-    const {techsList, setTechList} = useContext(DashboardContext);
+    const {techsList, setTechList} = useContext(UserContext);
     
     const [modalOpen, setModalOpen] = useState(false);
     const [modalOpenEdit, setModalOpenEdit] = useState(false);
@@ -47,6 +47,8 @@ export const TechProvider = ({ children }) => {
                     Authorization: `Bearer ${token}`
                 }
             }); 
+
+            toast.success("Tecnologia Editada com sucesso.", {autoClose:2000})
             const newEditTecnologies = techsList.map(tech => {
                 if(tech.id === editTech.id) {
                     return data;

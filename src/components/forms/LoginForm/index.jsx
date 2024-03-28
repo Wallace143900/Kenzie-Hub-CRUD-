@@ -4,12 +4,12 @@ import { Input } from "../Input";
 import { loginFormSchema } from "./loginForm.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useContext } from "react";
-import { DashboardContext } from "../../../providers/dashboardContext";
+import { UserContext } from "../../../providers/UserContext";
 import { InputPassword } from "../../InputPassword";
 
 export const LoginForm = () => {
 
-    const { userLogin } = useContext(DashboardContext);
+    const { userLogin } = useContext(UserContext);
 
     const onSubmit = (formData) => {
         userLogin(formData);
