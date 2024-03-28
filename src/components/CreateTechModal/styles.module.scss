@@ -43,18 +43,18 @@
                 margin-right: 2rem;
             }
 
-            #buttonHeader {
+            .button {
                 margin-right: 1rem;
                 margin-bottom: 12px;
                 width: 30px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: var(--Color-2);
+                background-color: var(--Grey-2);
             }
 
-            #buttonHeader:hover {
-                background-color: var(--Color-3);
+            .button:hover {
+                background-color: var(--Grey-3);
                 transition: 0.3s;
             }
         }

@@ -43,7 +43,7 @@
                 margin-right: 1rem;
             }
             
-            #buttonHeaders {
+            .buttonHeaders {
                 margin-right: 1rem;
                 width: 30px;
                 display: flex;
@@ -51,7 +51,7 @@
                 align-items: center;
             }
 
-            #buttonHeaders:hover {
+            .buttonHeaders:hover {
                 background-color: var(--Color-1);
                 transition: 0.3s;
             }

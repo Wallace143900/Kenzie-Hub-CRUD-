@@ -24,7 +24,7 @@ export const CreateTechModal = () => {
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <header>
                     <h2 className="title2">Cadastrar Tecnologias</h2>
-                    <button aria-label="close" title="Fechar" id={styles.buttonHeader} onClick={() => setModalOpen(false)}> <MdClose size={21} /> </button>
+                    <button aria-label="close" title="Fechar" className={styles.button} onClick={() => setModalOpen(false)}> <MdClose size={24} /> </button>
                 </header>
                 <div className={styles.addTecnologies}>
                     <InputModalCreate label="Nome" error={errors.title} {...register("title")} placeholder="Digite sua tecnologia"/>

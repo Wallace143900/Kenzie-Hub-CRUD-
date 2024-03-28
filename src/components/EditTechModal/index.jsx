@@ -29,7 +29,7 @@ export const EditTechModal = () => {
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <header>
                     <h2 className="title2">Editar Tecnologia</h2>
-                    <button aria-label="close" title="Fechar" id={styles.buttonHeaders} onClick={() => setEditTech(null)}> <MdClose size={22} /> </button>
+                    <button aria-label="close" title="Fechar" className={styles.buttonHeaders} onClick={() => setEditTech(null)}> <MdClose size={24} /> </button>
                 </header>
                 <div className={styles.addTecnologies}>
                     <InputModalEdit label="Name" error={errors.title} {...register("title")} placeholder="Digite sua tecnologia" values={editTech.title}/>
@@ -38,7 +38,7 @@ export const EditTechModal = () => {
                         <option>Inicinte</option>
                         <option>Intermediário</option>
                         <option>Avançado</option>
-                </select>
+                    </select>
                 </div>
                 <div id={styles.button}>
                     <button type="submit"id={styles.buttonFooter} className="paragraph">Salvar Alterações</button>

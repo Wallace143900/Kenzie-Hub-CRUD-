@@ -64,8 +64,12 @@ main {
                     width: 70%;
                 }
 
-                @media (min-width: 1024px) {
+                @media (min-width: 1440px) {
                     width: 90%;
+                }
+
+                @media (min-width: 1024px) {
+                    width: 120%;
                 }
             }
             
