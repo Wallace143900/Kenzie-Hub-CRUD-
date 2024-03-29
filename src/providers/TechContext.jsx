@@ -75,7 +75,7 @@ export const TechProvider = ({ children }) => {
             });
             const filteredTech = techsList.filter(({id}) => id !== tech_Id);
             setTechList(filteredTech);
-            toast.success("Tecnologia excluída com sucesso");
+            toast.error("Tecnologia excluída com sucesso");
         } catch (error) {
             console.log(error);
         }
