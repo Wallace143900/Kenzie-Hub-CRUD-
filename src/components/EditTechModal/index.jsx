@@ -35,7 +35,7 @@ export const EditTechModal = () => {
                     <InputModalEdit label="Name" error={errors.title} {...register("title")} placeholder="Digite sua tecnologia" values={editTech.title}/>
                     <label className="headline">Status</label>
                     <select name="Selecionar Status" {...register("status")} className="paragraph"> 
-                        <option>Inicinte</option>
+                        <option>Iniciante</option>
                         <option>Intermediário</option>
                         <option>Avançado</option>
                     </select>

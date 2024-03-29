@@ -30,7 +30,7 @@ export const CreateTechModal = () => {
                     <InputModalCreate label="Nome" error={errors.title} {...register("title")} placeholder="Digite sua tecnologia"/>
                     <label className="headline">Selecionar Status</label>
                     <select name="status" {...register("status")} className="paragraph"> 
-                        <option>Inicinte</option>
+                        <option>Iniciante</option>
                         <option>Intermediário</option>
                         <option>Avançado</option>
                     </select>

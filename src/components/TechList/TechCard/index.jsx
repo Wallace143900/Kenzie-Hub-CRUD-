@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styles from "./styles.module.scss";
-import { MdEdit,MdDelete } from "react-icons/md"
+import { MdEdit,MdDelete } from "react-icons/md";
 import { TechContext } from "../../../providers/TechContext";
 import { EditTechModal } from "../../EditTechModal";
 
