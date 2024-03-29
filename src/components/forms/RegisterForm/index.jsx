@@ -36,12 +36,12 @@ export const RegisterForm = () => {
                 <Input label="Contato" type="tel" error={errors.contact} {...register("contact")} placeholder="Digite aqui seu contato" />
                 <label className="paragraph" id={styles.select}>Selecionar Módulo</label>
                 <select className="title2" name="modulos" id="modulos" {...register("course_module")}>
-                    <option value="Primeiro modulo">Primeiro Módulo</option>
-                    <option value="Segundo modulo">Segundo Módulo</option>
-                    <option value="Terceiro modulo">Terceiro Módulo</option>
-                    <option value="Quarto modulo">Quarto Módulo</option>
-                    <option value="Quinto modulo">Quinto Módulo</option>
-                    <option value="Sexto modulo">Sexto Módulo</option>
+                    <option value="Primeiro modulo">Primeiro Módulo (Front-End Iniciante)</option>
+                    <option value="Segundo modulo">Segundo Módulo (Front-End Intermediário)</option>
+                    <option value="Terceiro modulo">Terceiro Módulo (Front-End Avançado)</option>
+                    <option value="Quarto modulo">Quarto Módulo (Back-End Iniciante)</option>
+                    <option value="Quinto modulo">Quinto Módulo (Back-End Intermediário)</option>
+                    <option value="Sexto modulo">Sexto Módulo (Back-End Avançado)</option>
                 </select>
             </div>
                 <button id={styles.buttonFooter} className="paragraph" type="submit">Cadastrar</button>
